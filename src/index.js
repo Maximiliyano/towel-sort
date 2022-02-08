@@ -9,9 +9,11 @@ var matrix = [
 
 module.exports = function towelSort (matrix) 
 {
-  var a = matrix.reduce((acc, cur, i) => {
+  var a = matrix.reduce((acc, cur, i) =>
+  {
     cur.sort((a, b) => !(i & 1) ? a - b : b - a).map(e => acc.push(e));
     return acc;
+
   }, []);
   return a;
 }
